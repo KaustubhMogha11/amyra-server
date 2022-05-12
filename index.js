@@ -11,7 +11,7 @@ import DefaultData from './default.js';
 import Routes from './routes/routes.js';
 import userRoutes from "./routes/userRoutes.js"
 import { v4 as uuid } from 'uuid';
-import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
+// import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 dotenv.config();
 
 const username = process.env.DB_USERNAME;
@@ -25,8 +25,8 @@ app.use("/api/users", userRoutes);
 
 
 // Error Handling middlewares
-app.use(notFound);
-app.use(errorHandler);
+// app.use(notFound);
+// app.use(errorHandler);
 Connection(username, password);
 
 app.listen(port, function (err) {
